@@ -1,0 +1,216 @@
+.video-plugin {
+  /* ==========================================================================
+     $Variables
+     ========================================================================== */
+  /* $Fonts
+     ========================================================================== */
+  /* $Colors
+     ========================================================================== */
+  /* $Radius
+     ========================================================================== */
+  /* $Easing
+     ========================================================================== */
+  /* ==========================================================================
+     $Mixins
+     ========================================================================== */
+  /* ==========================================================================
+     $Globals
+     ========================================================================== */
+  /* ==========================================================================
+     $Buttons
+     ========================================================================== */
+  /* ==========================================================================
+     $Flexible Media
+     ========================================================================== */
+  /* ==========================================================================
+     $Media Object
+     ========================================================================== */
+  /* ==========================================================================
+     $Magnific Popup (lightbox)
+     ========================================================================== */
+  /* $Interactive Stuff
+     ========================================================================== */
+  /* ==========================================================================
+     $Gallery
+     ========================================================================== */
+}
+.video-plugin html {
+  box-sizing: border-box;
+}
+.video-plugin *,
+.video-plugin *:before,
+.video-plugin *:after {
+  box-sizing: inherit;
+}
+.video-plugin main {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: center;
+  text-align: center;
+}
+.video-plugin .wrap {
+  width: 100%;
+}
+.video-plugin iframe {
+  border: 0;
+}
+.video-plugin :focus {
+  outline-color: #FFCC53;
+}
+.video-plugin .flex-media {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+.video-plugin .flex-media iframe,
+.video-plugin .flex-media object {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.video-plugin .media,
+.video-plugin .media-body {
+  overflow: hidden;
+  position: relative;
+  float: left;
+  margin-bottom: 5px;
+}
+.video-plugin .media-left .media-img {
+  float: left;
+}
+.video-plugin .media-right .media-img {
+  float: right;
+  margin-left: 1.277em;
+}
+.video-plugin .media-img img {
+  max-width: 280px;
+  width: 100%;
+  margin: 0 auto;
+}
+.video-plugin .popup {
+  background-color: #fff;
+  color: #1a1b1b;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+}
+.video-plugin .mfp-close {
+  color: #DEDFDF;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.video-plugin .mfp-active.mfp-bg {
+  opacity: 0;
+  transition: opacity 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+.video-plugin .mfp-active .mfp-content {
+  transition: all 0.24s;
+  transform: translateY(15%);
+  opacity: 0;
+}
+.video-plugin .mfp-ready.mfp-bg {
+  opacity: 0.85;
+}
+.video-plugin .mfp-ready .mfp-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+.video-plugin .mfp-removing.mfp-bg {
+  opacity: 0;
+}
+.video-plugin .mfp-removing .mfp-content {
+  opacity: 0;
+  transform: translateY(15%);
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.video-plugin .gallery-items {
+  padding: 0 0 0 10px;
+}
+.video-plugin .gallery-items .gallery-item:first-child .media-img {
+  border-top-right-radius: 8px;
+}
+.video-plugin .gallery-items .gallery-item:first-child .media-img img {
+  border-top-right-radius: 8px;
+}
+.video-plugin .gallery-items .gallery-item:last-child .media-img {
+  border-bottom-right-radius: 8px;
+}
+.video-plugin .gallery-items .gallery-item:last-child .media-img img {
+  border-bottom-right-radius: 8px;
+}
+.video-plugin .gallery-title {
+  border-top: 1px solid #DEDFDF;
+  border-bottom: 1px solid #DEDFDF;
+  font-weight: 700;
+  overflow: hidden;
+}
+.video-plugin .gallery-item {
+  transition: background 0.25s;
+}
+.video-plugin .gallery-item:active, .video-plugin .gallery-item:focus, .video-plugin .gallery-item:hover {
+  background-color: tint(#DEDFDF, 12%);
+}
+.video-plugin .gallery-item-desc {
+  font-size: 77%;
+  transition: color 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  color: #fff;
+}
+.video-plugin .gallery-item-desc:after {
+  content: "Playing";
+  display: block;
+  font-size: 80%;
+  letter-spacing: 1px;
+  speak: none;
+  opacity: 0;
+  text-transform: uppercase;
+  transform: translateY(100%);
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.video-plugin .active .gallery-item-desc {
+  color: #FFCC53;
+  transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+.video-plugin .active .gallery-item-desc:after {
+  opacity: 1;
+  transform: translateY(0);
+  transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  speak: normal;
+}
+.video-plugin .gallery-main {
+  float: left;
+  width: 80%;
+}
+.video-plugin .gallery-items {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 20%;
+  margin-bottom: 0;
+}
+.video-plugin ::-webkit-scrollbar {
+  display: none;
+}
+@media (max-width: 767px) {
+  .video-plugin .gallery-main {
+    float: left;
+    width: 70%;
+  }
+  .video-plugin .gallery-items {
+    width: 30%;
+  }
+}
